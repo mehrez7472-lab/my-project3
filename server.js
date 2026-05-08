@@ -3,6 +3,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
+if (!fs.existsSync('uploads')) fs.mkdirSync('uploads');
 const rateLimit = require('express-rate-limit');
 
 const app = express();
